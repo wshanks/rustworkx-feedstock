@@ -1,5 +1,5 @@
 {% set name = "rustworkx" %}
-{% set version = "0.13.2" %}
+{% set version = "0.14.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 0276cf0b989211859e8797b67d4c16ed6ac9eb32edb67e0a47e70d7d71e80574
+    sha256: d630e3dd2984bb3dfa1cc9af5d960c3b970a5c0512551d8340996e9e61e2ca44
 
 build:
   number: 0
@@ -33,7 +33,7 @@ requirements:
     - setuptools-rust
     - wheel
   run:
-    - numpy >=1.16.0
+    - numpy >=1.16.0,<2
     - python
   run_constrained:
     - matplotlib >=3.0
