@@ -1,5 +1,5 @@
 {% set name = "rustworkx" %}
-{% set version = "0.14.2" %}
+{% set version = "0.15.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: bd649322c0649b71fa18cc70a9af027b549560415fa860d6894736029c277b13
+    sha256: 41a50586c48367c80eebc26809105c0c47db47b1d12a5078efa94d8d1f3850a4
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - make
@@ -33,7 +34,7 @@ requirements:
     - setuptools-rust
     - wheel
   run:
-    - numpy >=1.16.0,<2
+    - numpy >=1.16.0,<3
     - python
   run_constrained:
     - matplotlib >=3.0
