@@ -1,5 +1,5 @@
 {% set name = "rustworkx" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 41a50586c48367c80eebc26809105c0c47db47b1d12a5078efa94d8d1f3850a4
+    sha256: 0e0cc86599f979285b2ab9c357276f3272f3fcb3b2df5651a6bf9704c570d4c1
 
 build:
   number: 0
