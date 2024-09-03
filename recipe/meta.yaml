@@ -38,6 +38,7 @@ requirements:
     - python
   run_constrained:
     - matplotlib >=3.0
+    - matplotlib-base >=3.0
     - pillow >=5.4
 
 test:
@@ -46,8 +47,17 @@ test:
     - rustworkx.visualization
   commands:
     - pip check
+    - stestr run
   requires:
+    - fixtures
+    - matplotlib-base
+    - networkx >=2.5
+    - pillow
     - pip
+    - stestr >=4.1
+    - testtools >=2.5.0
+  source_files:
+    - tests/*
 
 about:
   home: https://github.com/Qiskit/rustworkx
